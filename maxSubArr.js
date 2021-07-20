@@ -16,6 +16,7 @@ var maxSubArray = function (nums) {
       current = nums[i + 1];
     }
   }
+
   return sumArr.sort((a, b) => a - b)[sumArr.length - 1];
 };
 console.log(maxSubArray([5, 4, -1, 7, 8]));
