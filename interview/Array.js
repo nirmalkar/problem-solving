@@ -2,8 +2,9 @@
 
 const unsortedArray = [-10, 7, 29, 30, 5, -10, -70];
 
-const computeProduct = () =>{
-    
+const computeProduct = (unsortedArray) =>{
+    const sortedArr = unsortedArray.sort()
+    console.log(sortedArr[sortedArr.length - 1]);
 }
 
 

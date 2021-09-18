@@ -2,9 +2,6 @@
 // Find all the cavities on the map and replace their depths with the uppercase character X.
 function cavityMap(grid) {
     for(let i = 0; i < grid.length; i++){
-        if(grid[i].length < 3){
-            return
-        }
         const s = grid[i].split("")
         for(let j = 0; j < s.length; j++){
             let temp = parseInt(s[j])
