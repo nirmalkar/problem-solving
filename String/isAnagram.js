@@ -1,4 +1,6 @@
-var firstWord = "Mary";
+// Given two strings, return true if they are anagrams of one another "Mary" is an anagram of "Army"
+
+var firstWord = "Mry";
 var secondWord = "Army";
 
 const isAnagram = (s1, s2) => {
@@ -14,9 +16,12 @@ const isAnagram = (s1, s2) => {
       }
     });
   } else {
-    return false;
+    return `${s1} is not an anagram of ${s2}`;
   }
-  return !sameAlphabet.includes(false);
+  if (!sameAlphabet.includes(false)) {
+    return `${s1} is an anagram of ${s2}`;
+  }
+  return `${s1} is not an anagram of ${s2}`;
 };
 
 const isStrAnagram = isAnagram(firstWord, secondWord);
