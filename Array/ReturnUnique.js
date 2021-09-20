@@ -1,3 +1,5 @@
+// Removing duplicates of an array and returning an array of only unique elements
+
 //  return all the unique numbers (ES6 Implementation)
 const array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8]
 
