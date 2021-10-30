@@ -19,10 +19,7 @@ const twoSum = function (nums, target) {
     nums.forEach((ele, i) => {
         for (let j = i + 1; j < nums.length; j++) {
             if (ele + nums[j] === target) {
-                outputArr = [i, j]
-            }
-            if (outputArr.length) {
-                return
+                outputArr.push([i, j])
             }
         }
     })
@@ -34,13 +31,15 @@ console.log(sumIdx)
 // order of n
 const twoSumOptimized = (nums, target) => {
     const obj = {}
+    const targetArr = []
     for (let i = 0; i < nums.length; i++) {
         const otherNum = target - nums[i]
         if (otherNum in obj) {
-            return [obj[otherNum], i]
+            targetArr.push([obj[otherNum], i])
         }
         obj[nums[i]] = i
     }
+    return targetArr
 }
 
 const sumIdxOpt = twoSumOptimized([3, 2, 3, 4], 6)
