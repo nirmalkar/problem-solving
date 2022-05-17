@@ -26,4 +26,3 @@ const balanceParenthesis = (str) => {
 }
 
 const resultStr = balanceParenthesis('((asd))(sdf)((swa))')
-console.log(resultStr)
