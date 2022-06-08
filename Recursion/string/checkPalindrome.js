@@ -1,7 +1,8 @@
 /**
- * solve this problem recursion only.
  * Given an integer, write a function that returns true if the given number is palindrome,
  * else false. For example, 12321 is palindrome, but 1451 is not palindrome.
+ * IMP: solve this problem using recursion.
+ * don't use any JS in-built methods like reverse() and split()
  */
 
 function isNumPalindrome(number) {
@@ -11,10 +12,8 @@ function isNumPalindrome(number) {
     const len = number.length - 1
     let temp = 0
     const helper = (num, len, temp) => {
-        console.log(num[temp], num[len - temp], temp, len)
         if (num[temp] === num[len - temp]) {
             temp = temp + 1
-            console.log(temp, len)
             if (temp === len) {
                 return 'yes'
             }
