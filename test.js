@@ -1,7 +1,23 @@
-const todos = ["go for a walk", "talk to strangers", "work on new habits","get your shits together"]
-const index = todos.indexOf("talk to strangers")
-console.log(index);
-todos.splice(index, 1, "talk to strangers and every person you meet")
-const sliced = todos.slice(0,index).concat(todos.slice(index,todos.length))
-console.log(todos.slice(0,index));
-console.log(sliced);
+/**
+ * rotate 2d array 90deg
+ * O/P
+ * [[1, 2, 9],[3, 5, 4],[6, 7, 1],]
+ */
+
+const rotateArr = (arr) => {
+    const rotatedArr = []
+    for (let i = 0; i < arr.length; i++) {
+        const tempArr = []
+        Array.from(Array(arr.length).keys()).forEach((ele) => {
+            tempArr.push(arr[ele][i])
+        })
+        rotatedArr.push(tempArr)
+    }
+    return rotatedArr
+}
+const arr = [
+    [1, 3, 6],
+    [2, 5, 7],
+    [9, 4, 1],
+]
+console.log(rotateArr(arr))
