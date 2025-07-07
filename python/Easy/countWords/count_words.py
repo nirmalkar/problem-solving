@@ -8,13 +8,13 @@ import string
 
 def count_words(s: str) -> dict[str, int]:
     words = s.lower().translate(str.maketrans('', '', string.punctuation)).split()
-    word_occurence_count: dict[str, int] = {}
+    word_occurrence_count: dict[str, int] = {}
     for word in words:
-        if word in word_occurence_count:
-            word_occurence_count[word] += 1
+        if word in word_occurrence_count:
+            word_occurrence_count[word] += 1
         else:
-            word_occurence_count[word] = 1
-    return word_occurence_count
+            word_occurrence_count[word] = 1
+    return word_occurrence_count
 
 print(count_words("This is a test and this test is easy."))
 # -> {'this': 2, 'is': 2, 'a': 1, 'test': 2, 'and': 1, 'easy': 1}
